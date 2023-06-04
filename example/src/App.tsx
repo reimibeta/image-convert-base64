@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-// import { ExampleComponent } from 'image-convert-base64';
+import { convertBase64 } from 'image-convert-base64';
 
 const App = () => {
-  return <h1>Create React Library Example 😄</h1>
+
+  const [b, setB] = useState<any>();
+
+  return (
+    <div style={{ padding: 100 }}>
+      <form>
+        <input type="file" onChange={ async (e: any) => {
+            const base64 = await convertBase64(e.target.files[0]);
+            // console.log(base64)
+            if(base64){
+                setB(base64);
+            }
+          }} accept="image/*" />
+          <button onClick={() => {
+            console.log('test');
+          }}>test</button>
+      </form>
+      <p>file: {b ?? 'null'}</p>
+    </div>
+  );
 }
 
 export default App
