@@ -14,6 +14,7 @@ npm install --save image-convert-base64
 
 ```tsx
 import { convertBase64 } from "image-convert-base64";
+
 <div style={{ padding: 100 }}>
 
     <input type="file" onChange={ async (e: any) => {
@@ -25,7 +26,7 @@ import { convertBase64 } from "image-convert-base64";
         }} accept="image/*" />
     
     <p>file: {b ?? 'null'}</p>
-    
+
 </div>
 ```
 
