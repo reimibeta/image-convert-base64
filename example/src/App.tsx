@@ -1,10 +1,9 @@
 import React from 'react'
 
-import { ExampleComponent } from 'image-convert-base64'
-import 'image-convert-base64/dist/index.css'
+// import { ExampleComponent } from 'image-convert-base64';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <h1>Create React Library Example 😄</h1>
 }
 
 export default App
